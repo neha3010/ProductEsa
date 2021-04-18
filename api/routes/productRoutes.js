@@ -5,15 +5,15 @@
         var productList = require('../controllers/productController');
 
 
-// todoList Routes
+// ProductList Routes
 
-// get and post request for /todos endpoints
+// get and post request for /products endpoints
         app
         .route("/rest/v1/products")
         .get(productList.listAllProducts)
         .post(productList.createNewProduct);
 
-// put and delete request for /todos endpoints
+// put and delete request for /products endpoints
         app
         .route("/rest/v1/product/:id")
         .put(productList.updateProduct)
