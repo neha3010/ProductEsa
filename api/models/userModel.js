@@ -4,7 +4,7 @@
 
 // Declare schema and assign Schema class
     const Schema = mongoose.Schema;
-    // var uuid = {"28740","01848","12984"};
+
 // Create Schema Instance and add schema propertise
     const UserSchema = new Schema({
         uuid: {
