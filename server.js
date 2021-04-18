@@ -23,7 +23,6 @@ app.use(bodyParser.urlencoded({ extended:true }));
 
 // Add endpoint
 app.get('/', (req, res) => {
-console.log(req.body);
 res.send("Hello World");
 });
 
