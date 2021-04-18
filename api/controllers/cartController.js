@@ -3,7 +3,7 @@ const  Cart = require("../models/cartModel");
 
 // DEFINE CONTROLLER FUNCTIONS
 
-// listAllCart function - To list all todos
+// listAllCart function - 
 exports.listAllCart = (req, res) => {
 Cart.find({}, (err, cart) => {
 if (err) {
