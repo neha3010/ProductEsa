@@ -1,9 +1,9 @@
-// import Todo Model
+// import User Model
 const  User = require("../models/userModel");
 
 // DEFINE CONTROLLER FUNCTIONS
 
-// listAllTodos function - To list all todos
+// listAllUsers function - To list all users
 exports.listAllUsers = (req, res) => {
 User.find({}, (err, user) => {
 if (err) {
@@ -13,7 +13,7 @@ res.status(200).json(user);
 });
 };
 
-// createNewTodo function - To create new todo
+// createNewUser function - To create new user
 exports.createNewUser = (req, res) => {
 let  newTodo = new User (req.body);
 newTodo.save((err, user) => {
@@ -24,7 +24,7 @@ res.status(201).json(user);
 });
 };
 
-// updateTodo function - To update todo status by id
+// updateUser function - To update user status by id
 exports.updateUser = (req, res) => {
 Cart.findOneAndUpdate({ uuid:req.params.id }, req.body, { new:true }, (err, todo) => {
 if (err) {
@@ -34,7 +34,7 @@ res.status(200).json(user);
 });
 };
 
-// deleteTodo function - To delete todo by id
+// deleteUser function - To delete user by id
 exports.deleteUser = async ( req, res) => {
 await  User.deleteOne({ uuid:req.params.id }, (err) => {
 if (err) {
