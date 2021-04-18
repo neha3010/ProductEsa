@@ -2,7 +2,6 @@
 
 // create App function
     module.exports = function(app) {
-        // var productList = require('../controllers/productController');
         var productList = require('../controllers/productController');
 
 
