@@ -1,40 +1,40 @@
-// import Todo Model
+// import Cart Model
 const  Cart = require("../models/cartModel");
 
 // DEFINE CONTROLLER FUNCTIONS
 
-// listAllTodos function - To list all todos
+// listAllCart function - To list all todos
 exports.listAllCart = (req, res) => {
-Cart.find({}, (err, todo) => {
+Cart.find({}, (err, cart) => {
 if (err) {
 res.status(500).send(err);
 }
-res.status(200).json(todo);
+res.status(200).json(cart);
 });
 };
 
-// createNewTodo function - To create new todo
+// createNewCart function - To create new cart
 exports.createNewCart = (req, res) => {
 let  newTodo = new Cart (req.body);
-newTodo.save((err, todo) => {
+newTodo.save((err, cart) => {
 if (err) {
 res.status(500).send(err);
 }
-res.status(201).json(todo);
+res.status(201).json(cart);
 });
 };
 
-// updateTodo function - To update todo status by id
+// updateCart function - To update cart status by id
 exports.updateCart = (req, res) => {
-Cart.findOneAndUpdate({ productId:req.params.id }, req.body, { new:true }, (err, todo) => {
+Cart.findOneAndUpdate({ productId:req.params.id }, req.body, { new:true }, (err, cart) => {
 if (err) {
 res.status(500).send(err);
 }
-res.status(200).json(todo);
+res.status(200).json(cart);
 });
 };
 
-// deleteTodo function - To delete todo by id
+// deleteCart function - To delete cart by id
 exports.deleteCart = async ( req, res) => {
 await  Cart.deleteOne({ productId:req.params.id }, (err) => {
 if (err) {
