@@ -11,7 +11,7 @@ require("./views/db");
 const  app = express();
 
 // Import API route
-var routes = require('./api/routes/productRoutes'); //importing route
+var routes = require('./api/routes/routes'); //importing route
 routes(app);
 
 // define port to run express app
