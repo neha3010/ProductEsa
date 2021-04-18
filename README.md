@@ -32,7 +32,7 @@
 - /rest/v1/cart/${productId} - update the product in cart with productId
 - /rest/v1/users/${uuid} - update the user with uuid
 
-### DELETE Product
+### DELETE
 - /rest/v1/product/${productId} - delete the product with productId.
 - /rest/v1/cart/${productId} - delete the product with productId in cart.
 - /rest/v1/users/${uuid} - delete the product with uuid.
