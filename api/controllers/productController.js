@@ -38,7 +38,7 @@ res.status(200).json(product);
 
 // deleteTodo function - To delete todo by id
 exports.deleteProduct = async ( req, res) => {
-await  Product.deleteOne({ _id: req.params.id}, (err) => {
+await  Product.deleteOne({ productId: req.params.id}, (err) => {
 if (err) {
 return res.status(404).send(err);
 }
