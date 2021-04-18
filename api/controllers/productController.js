@@ -16,8 +16,8 @@ res.status(200).json(product);
 // createNewProduct function - To create new product
 exports.createNewProduct = (req, res) => {
     console.log("request body",req.body);
-    let  newTodo = new Product (req.body);
-    newTodo.save((err, product) => {
+    let  newProduct = new Product (req.body);
+    newProduct.save((err, product) => {
         if (err) {
             res.status(500).send(err);
         }else {
