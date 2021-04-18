@@ -28,7 +28,7 @@ exports.createNewProduct = (req, res) => {
 
 // updateTodo function - To update todo status by id
 exports.updateProduct = (req, res) => {
-Product.findOneAndUpdate({ _id:req.params.id }, req.body, {new:true}, (err, product) => {
+Product.findOneAndUpdate({ productId:req.params.id }, req.body, {new:true}, (err, product) => {
 if (err) {
     res.status(500).send(err);
 }
