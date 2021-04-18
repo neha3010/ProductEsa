@@ -18,8 +18,8 @@ routes(app);
 const  port = process.env.PORT || 3000;
 
 // use bodyParser middleware on express app
-app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended:true }));
 
 // Add endpoint
 app.get('/', (req, res) => {
