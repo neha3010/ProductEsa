@@ -6,7 +6,7 @@
     const Schema = mongoose.Schema;
     // var uuid = {"28740","01848","12984"};
 // Create Schema Instance and add schema propertise
-    const TodoSchema = new Schema({
+    const UserSchema = new Schema({
         uuid: {
             type:String,
             required:true
@@ -34,4 +34,4 @@
     });
 
 // create and export model
-module.exports = mongoose.model("user", TodoSchema);
+module.exports = mongoose.model("user", UserSchema);
