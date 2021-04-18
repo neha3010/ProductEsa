@@ -6,7 +6,7 @@
     const Schema = mongoose.Schema;
 
 // Create Schema Instance and add schema propertise
-    const TodoSchema = new Schema({
+    const CartSchema = new Schema({
         productId: {
             type:String,
             required:true
@@ -27,4 +27,4 @@
     });
 
 // create and export model
-module.exports = mongoose.model("cart", TodoSchema);
+module.exports = mongoose.model("cart", CartSchema);
