@@ -15,8 +15,8 @@ res.status(200).json(user);
 
 // createNewUser function - To create new user
 exports.createNewUser = (req, res) => {
-let  newTodo = new User (req.body);
-newTodo.save((err, user) => {
+let  newUser = new User (req.body);
+newUser.save((err, user) => {
 if (err) {
 res.status(500).send(err);
 }
