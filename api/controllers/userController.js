@@ -26,7 +26,7 @@ res.status(201).json(user);
 
 // updateUser function - To update user status by id
 exports.updateUser = (req, res) => {
-Cart.findOneAndUpdate({ uuid:req.params.id }, req.body, { new:true }, (err, todo) => {
+Cart.findOneAndUpdate({ uuid:req.params.id }, req.body, { new:true }, (err, user) => {
 if (err) {
 res.status(500).send(err);
 }
