@@ -15,8 +15,8 @@ res.status(200).json(cart);
 
 // createNewCart function - To create new cart
 exports.createNewCart = (req, res) => {
-let  newTodo = new Cart (req.body);
-newTodo.save((err, cart) => {
+let  newCart = new Cart (req.body);
+newCart.save((err, cart) => {
 if (err) {
 res.status(500).send(err);
 }
